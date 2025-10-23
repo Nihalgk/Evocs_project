@@ -445,8 +445,14 @@
         /* Responsive sizing for mobile */
         @media (max-width: 768px) {
             .section-hero-home__img {
-                width: 70%;
-                max-width: 400px;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center center !important;
+                left: 0 !important;
+                top: 0 !important;
+                max-width: none !important;
+                transform: none !important;
             }
             
             .section-hero-home .container {
@@ -484,8 +490,14 @@
         
         @media (max-width: 480px) {
             .section-hero-home__img {
-                width: 80%;
-                max-width: 300px;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center center !important;
+                left: 0 !important;
+                top: 0 !important;
+                max-width: none !important;
+                transform: none !important;
             }
             
             .section-hero-home .container {
@@ -507,6 +519,17 @@
         }
         
         @media (max-width: 375px) {
+            .section-hero-home__img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center center !important;
+                left: 0 !important;
+                top: 0 !important;
+                max-width: none !important;
+                transform: none !important;
+            }
+            
             .hero-title {
                 font-size: 1.9rem !important;
                 line-height: 1.35 !important;
@@ -666,9 +689,69 @@
 
             /* Hero section mobile */
             .hero-section,
-            .main-banner {
+            .main-banner,
+            .section-hero-home {
                 padding: 40px 0 !important;
                 text-align: center;
+                min-height: 100vh !important;
+                height: 100vh !important;
+            }
+
+            /* CRITICAL: Hero image mobile fix */
+            .section-hero-home__img {
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center center !important;
+                z-index: 2 !important;
+                max-width: none !important;
+                max-height: none !important;
+                transform: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .section-hero-home .container {
+                position: relative !important;
+                z-index: 10 !important;
+                min-height: 100vh !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                padding: 20px 15px !important;
+            }
+
+            .hero-content {
+                text-align: center !important;
+                max-width: 95% !important;
+                z-index: 10 !important;
+            }
+
+            .hero-title {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 20px !important;
+                color: #ffffff !important;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+            }
+
+            .hero-buttons {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 15px !important;
+                align-items: center !important;
+                margin-top: 25px !important;
+            }
+
+            .hero-btn {
+                width: 200px !important;
+                padding: 12px 20px !important;
+                font-size: 16px !important;
+                text-align: center !important;
             }
 
             .hero-section h1,
